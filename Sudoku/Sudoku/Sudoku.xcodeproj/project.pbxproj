@@ -12,6 +12,7 @@
 		4A8996FB283294D200446CE9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8996FA283294D200446CE9 /* ViewController.swift */; };
 		4A899700283294D400446CE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A8996FF283294D400446CE9 /* Assets.xcassets */; };
 		4A899703283294D400446CE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A899701283294D400446CE9 /* LaunchScreen.storyboard */; };
+		4A89970B283297A000446CE9 /* BoardGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A89970A283297A000446CE9 /* BoardGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		4A8996FF283294D400446CE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A899702283294D400446CE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A899704283294D400446CE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A89970A283297A000446CE9 /* BoardGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardGenerator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				4A8996F6283294D200446CE9 /* AppDelegate.swift */,
 				4A8996F8283294D200446CE9 /* SceneDelegate.swift */,
 				4A8996FA283294D200446CE9 /* ViewController.swift */,
+				4A89970A283297A000446CE9 /* BoardGenerator.swift */,
 				4A8996FF283294D400446CE9 /* Assets.xcassets */,
 				4A899701283294D400446CE9 /* LaunchScreen.storyboard */,
 				4A899704283294D400446CE9 /* Info.plist */,
@@ -136,6 +139,7 @@
 			files = (
 				4A8996FB283294D200446CE9 /* ViewController.swift in Sources */,
 				4A8996F7283294D200446CE9 /* AppDelegate.swift in Sources */,
+				4A89970B283297A000446CE9 /* BoardGenerator.swift in Sources */,
 				4A8996F9283294D200446CE9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
