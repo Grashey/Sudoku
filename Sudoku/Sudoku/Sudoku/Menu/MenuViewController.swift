@@ -15,14 +15,22 @@ class MenuViewController: UIViewController {
 
     var onNewGame: (() -> Void)?
     var onResumeLastGame: (() -> Void)?
+    
+    lazy var menuView = MenuView(frame: view.frame)
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = .yellow
+        self.view.addSubview(menuView)
     }
     
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        guard let inProgress = presenter?.inProgress() else { return }
+        menuView.configure(gameInProgress: inProgress)
+    }
+    
 }
 
 extension MenuViewController: MenuVC {}

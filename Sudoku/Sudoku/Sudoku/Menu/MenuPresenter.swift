@@ -7,12 +7,27 @@
 
 import Foundation
 
-protocol MenuPresenterProtocol {}
+protocol MenuPresenterProtocol {
+    
+    func inProgress() -> Bool
+}
 
 class MenuPresenter {
     
     weak var viewController: MenuVC?
+    let gameKeeper: Keeper
+    var gameInProgress: Game?
     
+    init(gameKeeper: Keeper = GameKeeper()) {
+        self.gameKeeper = gameKeeper
+        self.gameInProgress = gameKeeper.load()
+    }
+
 }
 
-extension MenuPresenter: MenuPresenterProtocol {}
+extension MenuPresenter: MenuPresenterProtocol {
+    
+    func inProgress() -> Bool {
+        gameInProgress != nil ? true : false
+    }
+}
