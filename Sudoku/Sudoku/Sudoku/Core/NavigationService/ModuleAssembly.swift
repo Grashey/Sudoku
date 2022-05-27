@@ -9,14 +9,21 @@ import UIKit
 
 protocol Assembly {
     
-    func build(_ moduleName: ModuleName) -> UIViewController
+    func build() -> UIViewController
 }
 
-class ModuleAssembly: Assembly {
+class ModuleAssembly {
+    
+    static let shared = ModuleAssembly()
     
     func build(_ moduleName: ModuleName) -> UIViewController {
+        assembly(moduleName).build()
+    }
+    
+    func assembly(_ moduleName: ModuleName) -> Assembly {
         switch moduleName {
-        case .menu: return MenuAssembly().build()
+        case .menu: return MenuAssembly()
+        case .session: return SessionAssembly()
         }
     }
 }

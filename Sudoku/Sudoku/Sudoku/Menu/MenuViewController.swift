@@ -11,7 +11,7 @@ protocol MenuVC: AnyObject {}
 
 class MenuViewController: UIViewController {
     
-    var presenter: MenuPresenterProtocol?
+    var presenter: iMenuPresenter?
 
     var onNewGame: (() -> Void)?
     var onResumeLastGame: (() -> Void)?
@@ -22,6 +22,7 @@ class MenuViewController: UIViewController {
         super.viewDidLoad()
 
         self.view.addSubview(menuView)
+        menuView.newGameButton.addTarget(self, action: #selector(newGame), for: .touchUpInside)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -29,6 +30,10 @@ class MenuViewController: UIViewController {
         
         guard let inProgress = presenter?.inProgress() else { return }
         menuView.configure(gameInProgress: inProgress)
+    }
+    
+    @objc func newGame() {
+        onNewGame?()
     }
     
 }

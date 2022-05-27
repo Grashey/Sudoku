@@ -9,6 +9,8 @@ import Foundation
 
 enum ModuleName {
     
-    /// экран основного меню
+    /// экран основного меню(1й уровень)
     case menu
+    /// экран игровой сессии (2й уровень)
+    case session
 }

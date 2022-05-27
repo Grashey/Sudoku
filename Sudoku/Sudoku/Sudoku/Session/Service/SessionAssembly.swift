@@ -1,17 +1,17 @@
 //
-//  MenuAssembly.swift
+//  SessionAssembly.swift
 //  Sudoku
 //
-//  Created by Aleksandr Fetisov on 16.05.2022.
+//  Created by Aleksandr Fetisov on 27.05.2022.
 //
 
 import UIKit
 
-class MenuAssembly: Assembly {
+class SessionAssembly: Assembly {
     
     func build() -> UIViewController {
-        let controller = MenuViewController()
-        let presenter = MenuPresenter()
+        let controller = SessionViewController()
+        let presenter = SessionPresenter()
         controller.presenter = presenter
         presenter.viewController = controller
         return controller

@@ -30,7 +30,7 @@ class MenuView: UIView {
         return $0
     }(UIButton())
     
-    lazy var buttonStackView: UIStackView = {
+    private lazy var buttonStackView: UIStackView = {
         $0.axis = .vertical
         $0.distribution = .fillEqually
         $0.spacing = inset

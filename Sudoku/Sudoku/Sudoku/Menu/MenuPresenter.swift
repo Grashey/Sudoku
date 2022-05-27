@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol MenuPresenterProtocol {
+protocol iMenuPresenter {
     
     func inProgress() -> Bool
 }
@@ -25,7 +25,7 @@ class MenuPresenter {
 
 }
 
-extension MenuPresenter: MenuPresenterProtocol {
+extension MenuPresenter: iMenuPresenter {
     
     func inProgress() -> Bool {
         gameInProgress != nil ? true : false

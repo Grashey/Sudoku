@@ -23,6 +23,11 @@
 		4A8997292833B36B00446CE9 /* GameKeeper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8997282833B36B00446CE9 /* GameKeeper.swift */; };
 		4A89972B2833B3C200446CE9 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A89972A2833B3C200446CE9 /* Game.swift */; };
 		4A89972D2834164800446CE9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A89972C2834164800446CE9 /* Constants.swift */; };
+		4A89979C2840FDFD00446CE9 /* SessionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A89979B2840FDFD00446CE9 /* SessionCoordinator.swift */; };
+		4A8997A028410B8A00446CE9 /* SessionAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A89979F28410B8A00446CE9 /* SessionAssembly.swift */; };
+		4A8997A228410BDA00446CE9 /* SessionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8997A128410BDA00446CE9 /* SessionPresenter.swift */; };
+		4A8997A428410C3C00446CE9 /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8997A328410C3C00446CE9 /* SessionViewController.swift */; };
+		4A8997A62841114300446CE9 /* SessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8997A52841114300446CE9 /* SessionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +49,11 @@
 		4A8997282833B36B00446CE9 /* GameKeeper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameKeeper.swift; sourceTree = "<group>"; };
 		4A89972A2833B3C200446CE9 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		4A89972C2834164800446CE9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4A89979B2840FDFD00446CE9 /* SessionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionCoordinator.swift; sourceTree = "<group>"; };
+		4A89979F28410B8A00446CE9 /* SessionAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionAssembly.swift; sourceTree = "<group>"; };
+		4A8997A128410BDA00446CE9 /* SessionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionPresenter.swift; sourceTree = "<group>"; };
+		4A8997A328410C3C00446CE9 /* SessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionViewController.swift; sourceTree = "<group>"; };
+		4A8997A52841114300446CE9 /* SessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +90,7 @@
 				4A8996F8283294D200446CE9 /* SceneDelegate.swift */,
 				4A89970C28329EF000446CE9 /* Core */,
 				4A89971A2832A3DB00446CE9 /* Menu */,
+				4A89979E2840FE1000446CE9 /* Session */,
 				4A899701283294D400446CE9 /* LaunchScreen.storyboard */,
 				4A8996FF283294D400446CE9 /* Assets.xcassets */,
 				4A899704283294D400446CE9 /* Info.plist */,
@@ -127,6 +138,26 @@
 				4A89971F2832A8CB00446CE9 /* ModuleName.swift */,
 			);
 			path = NavigationService;
+			sourceTree = "<group>";
+		};
+		4A89979D2840FE0300446CE9 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				4A89979B2840FDFD00446CE9 /* SessionCoordinator.swift */,
+				4A89979F28410B8A00446CE9 /* SessionAssembly.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		4A89979E2840FE1000446CE9 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				4A89979D2840FE0300446CE9 /* Service */,
+				4A8997A128410BDA00446CE9 /* SessionPresenter.swift */,
+				4A8997A328410C3C00446CE9 /* SessionViewController.swift */,
+				4A8997A52841114300446CE9 /* SessionView.swift */,
+			);
+			path = Session;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,7 +233,11 @@
 				4A8997192832A3D700446CE9 /* MenuAssembly.swift in Sources */,
 				4A8997152832A19000446CE9 /* Coordinator.swift in Sources */,
 				4A8997172832A35A00446CE9 /* ModuleAssembly.swift in Sources */,
+				4A8997A428410C3C00446CE9 /* SessionViewController.swift in Sources */,
 				4A89972B2833B3C200446CE9 /* Game.swift in Sources */,
+				4A8997A028410B8A00446CE9 /* SessionAssembly.swift in Sources */,
+				4A89979C2840FDFD00446CE9 /* SessionCoordinator.swift in Sources */,
+				4A8997A228410BDA00446CE9 /* SessionPresenter.swift in Sources */,
 				4A89971E2832A63B00446CE9 /* MenuPresenter.swift in Sources */,
 				4A89971C2832A4CD00446CE9 /* MenuViewController.swift in Sources */,
 				4A8997292833B36B00446CE9 /* GameKeeper.swift in Sources */,
@@ -211,6 +246,7 @@
 				4A8997272833B10300446CE9 /* MenuView.swift in Sources */,
 				4A8997222832A94F00446CE9 /* MenuCoordinator.swift in Sources */,
 				4A89972D2834164800446CE9 /* Constants.swift in Sources */,
+				4A8997A62841114300446CE9 /* SessionView.swift in Sources */,
 				4A8997202832A8CB00446CE9 /* ModuleName.swift in Sources */,
 				4A8996F9283294D200446CE9 /* SceneDelegate.swift in Sources */,
 			);

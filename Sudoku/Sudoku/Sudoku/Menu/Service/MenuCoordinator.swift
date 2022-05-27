@@ -9,13 +9,12 @@ import UIKit
 
 class MenuCoordinator {
     
-    let assembly: Assembly
+    let assembly = ModuleAssembly.shared
     var window: UIWindow?
     var navigationController: UINavigationController?
     
-    init(assembly: Assembly = ModuleAssembly(), window: UIWindow?) {
+    init(window: UIWindow?) {
         self.window = window
-        self.assembly = assembly
     }
 }
 
@@ -24,7 +23,11 @@ extension MenuCoordinator: Coordinator {
     func start() {
         guard let controller = assembly.build(.menu) as? MenuViewController else { return }
         
-        controller.onNewGame = {}
+        controller.onNewGame = { [weak self] in
+            let session = SessionCoordinator(self?.navigationController)
+            session.start()
+        }
+        
         controller.onResumeLastGame = {}
         
         navigationController = UINavigationController(rootViewController: controller)
