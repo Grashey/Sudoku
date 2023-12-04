@@ -7,9 +7,10 @@
 
 import Foundation
 
+typealias Board = [[Int]]
+
 protocol GameGenerator {
-    
-    func generate() -> [[Int]]
+    func generate() -> Board
 }
 
 ///  Note: Создается массив из 9 массивов reference, случайным образом перемешивается. (идея взята тут: https://habr.com/ru/post/192102 )
@@ -117,13 +118,14 @@ final class BoardGenerator {
 
 extension BoardGenerator: GameGenerator {
     
-    func generate() -> [[Int]] {
+    func generate() -> Board {
         makeSimpleBoard()
         let operations: [Void] = [transposing(), swapRows(), swapColumns(), swapAreaRows(), swapAreaColumns()]
         let queque = DispatchQueue(label: "serial")
-        for _ in 0...1000 {
+        for _ in 0...100000 {
             queque.sync {
-                operations[Int.random(in: 0..<operations.count)]
+                let operationIndex = Int.random(in: 0..<operations.count)
+                operations[operationIndex]
             }
         }
         return masterArray
