@@ -12,11 +12,13 @@ class Session {
     let gameBoard: Board
     var playerBoard: PlayerBoard
     let gameMode: GameMode
+    var position: Position
     
-    init(gameBoard: Board, playerBoard: PlayerBoard, gameMode: GameMode) {
+    init(gameBoard: Board, playerBoard: PlayerBoard, startPosition: Position, gameMode: GameMode) {
         self.gameBoard = gameBoard
         self.playerBoard = playerBoard
         self.gameMode = gameMode
+        self.position = startPosition
     }
     
 }

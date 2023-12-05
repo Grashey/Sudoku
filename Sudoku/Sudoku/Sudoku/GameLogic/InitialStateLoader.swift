@@ -9,6 +9,12 @@ import Foundation
 
 class InitialStateLoader {
     
+    private var state: [Position] = []
+    private var startOpenedValues: Int?
+    private var maxValuesInRow: Int?
+    private let maxBoardIndex = 8
+    private var areas: [[Position]]?
+    
     func start(with mode: GameMode) -> [Position] {
         areas = makeAreas()
         
@@ -20,14 +26,9 @@ class InitialStateLoader {
             startOpenedValues = 30
             maxValuesInRow = 7
         }
+        
         return makeInitialPositions()
     }
-    
-    private var state: [Position] = []
-    private var startOpenedValues: Int?
-    private var maxValuesInRow: Int?
-    private let maxBoardIndex = 8
-    private var areas: [[Position]]?
     
     private func makeInitialPositions() -> [Position] {
         guard let startOpenedValues = startOpenedValues else { return [] }
