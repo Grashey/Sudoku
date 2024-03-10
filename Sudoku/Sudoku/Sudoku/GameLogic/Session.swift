@@ -21,4 +21,36 @@ class Session {
         self.position = startPosition
     }
     
+    func standOn(position: Position) {
+        self.position = position
+    }
+    
+    func apply(value: Int) {
+        guard !playerBoard.checkIsInitial(position: position) else { return }
+        let gameValue = gameBoard[position.row][position.column]
+        
+        if value == gameValue {
+            let cellIsOpened = playerBoard.contains(position: position)
+            if !cellIsOpened {
+                playerBoard.save(position: position)
+            } else {
+                let cellIsFalseOpened = playerBoard.contains(falseValue: value, position: position)
+                if !cellIsFalseOpened {
+                    playerBoard.remove(position: position)
+                }
+            }
+            if playerBoard.contains(falseValue: value, position: position) {
+                playerBoard.remove(falseValue: value, position: position)
+            }
+        } else {
+            let cellIsOpened = playerBoard.contains(position: position)
+            if !cellIsOpened {
+                playerBoard.save(position: position)
+            } else {
+                playerBoard.remove(position: position)
+            }
+        }
+       
+    }
+    
 }

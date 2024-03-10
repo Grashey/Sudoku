@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         let board = generator.generate()
         let mode: GameMode = .easy
         let initialState = starter.start(with: mode)
-        let playerBoard = PlayerBoard(initialState: initialState, trueOpened: [], falseOpened: [])
+        let playerBoard = PlayerBoard(initialState: initialState, openedPositions: [], falseOpened: [])
         let startPosition = playerBoard.findStartPosition()
         let session = Session(gameBoard: board, playerBoard: playerBoard, startPosition: startPosition, gameMode: mode)
         
